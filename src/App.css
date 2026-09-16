@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --sky-blue: #c8d9e6;
+  --beige: #f5f5eb;
+  --white: #ffffff;
+  --blue: #58778c;
+  --dark-blue: #2e4656;
+  --soft-blue: #a9c2d2;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(200, 217, 230, 0.75), transparent 30%),
+    radial-gradient(circle at 88% 92%, rgba(169, 194, 210, 0.5), transparent 32%),
+    var(--beige);
+}
+
+.profile-card {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 24px 60px rgba(46, 70, 86, 0.14);
+}
+
+.hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  background: var(--beige);
+}
+
+.profile-photo {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--beige);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.presentation {
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo-km {
+  width: 220px;
+  height: 124px;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-line {
+  width: 160px;
+  margin: 4px 0 8px;
+  border-top: 1px solid rgba(88, 119, 140, 0.45);
+}
+
+.presentation h1 {
+  margin: 0;
+  color: var(--dark-blue);
+  font: 500 48px/1 'Cormorant Garamond', serif;
+}
+
+.profession {
+  margin: 9px 0 16px;
+  font-size: 10px;
+  letter-spacing: 5px;
+}
+
+.ornament {
+  width: min(100%, 420px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: 8px;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid rgba(88, 119, 140, 0.35);
+}
+
+.intro {
+  max-width: 440px;
+  margin: 16px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-socials,
+.footer-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-socials a,
+.footer-socials a {
+  color: var(--blue);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.hero-socials a:hover,
+.footer-socials a:hover {
+  color: var(--dark-blue);
+  transform: translateY(-2px);
+}
+
+.hero-socials svg,
+.footer-socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+.links {
+  padding: 54px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  background: linear-gradient(135deg, var(--sky-blue), #dce7ed);
+}
+
+.care-card {
+  min-height: 94px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  border: 1px solid rgba(88, 119, 140, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--dark-blue);
+  box-shadow:
+    0 2px 5px rgba(46, 70, 86, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.care-card p {
+  margin: 0;
+  text-align: center;
+  font: 500 clamp(17px, 2vw, 23px)/1.35 'Cormorant Garamond', serif;
+}
+
+.link-card {
+  min-height: 94px;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 58px 1fr 34px;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid rgba(88, 119, 140, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--dark-blue);
+  text-decoration: none;
+  box-shadow:
+    0 2px 5px rgba(46, 70, 86, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 9px 20px rgba(46, 70, 86, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.link-icon,
+.link-arrow {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(245, 245, 235, 0.88);
+  box-shadow: 0 2px 5px rgba(46, 70, 86, 0.14);
+}
+
+.link-icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(88, 119, 140, 0.22);
+}
+
+.link-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5;
+}
+
+.link-arrow {
+  width: 34px;
+  height: 34px;
+}
+
+.link-arrow svg {
+  width: 17px;
+  height: 17px;
+}
+
+.link-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.link-copy strong {
+  font: 500 15px/1.2 'Montserrat', sans-serif;
+}
+
+.link-copy small {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.procedures {
+  padding: 76px 54px;
+  scroll-margin-top: 20px;
+  background: var(--beige);
+}
+
+.section-heading {
+  max-width: 620px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-heading > span {
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  color: var(--dark-blue);
+  font: 500 clamp(36px, 5vw, 52px)/1 'Cormorant Garamond', serif;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--blue);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.procedure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.procedure-card {
+  min-height: 230px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  isolation: isolate;
+  border: 0;
+  border-radius: 18px;
+  background-color: var(--blue);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1px rgba(88, 119, 140, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.procedure-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 45, 58, 0.12) 15%,
+    rgba(25, 45, 58, 0.8) 100%
+  );
+}
+
+.procedure-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 0 0 1px rgba(88, 119, 140, 0.18),
+    0 10px 24px rgba(46, 70, 86, 0.1);
+}
+
+.procedure-card h3 {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font: 500 23px/1.15 'Cormorant Garamond', serif;
+  text-shadow: 0 2px 12px rgba(20, 37, 48, 0.5);
+}
+
+.location-section {
+  scroll-margin-top: 20px;
+  background: var(--white);
+}
+
+.location-info {
+  padding: 76px 54px;
+  text-align: center;
+}
+
+.section-label {
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.location-info h2 {
+  margin: 8px 0;
+  color: var(--dark-blue);
+  font: 500 clamp(36px, 5vw, 52px)/1 'Cormorant Garamond', serif;
+}
+
+.location-intro {
+  max-width: 520px;
+  margin: 0 auto 38px;
+  color: var(--blue);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.city-grid {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.city-card {
+  min-height: 150px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(88, 119, 140, 0.16);
+  border-radius: 18px;
+  background: var(--beige);
+  color: var(--dark-blue);
+}
+
+.city-card svg {
+  width: 27px;
+  height: 27px;
+  margin-bottom: 12px;
+  color: var(--blue);
+  stroke-width: 1.5;
+}
+
+.city-card h3 {
+  margin: 0;
+  font: 500 28px/1.2 'Cormorant Garamond', serif;
+}
+
+footer {
+  padding: 34px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--beige);
+}
+
+footer > p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.footer-ornament {
+  width: 160px;
+  margin: 9px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 7px;
+}
+
+.footer-ornament::before,
+.footer-ornament::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid rgba(88, 119, 140, 0.32);
+}
+
+footer > small {
+  margin-top: 20px;
+  font-size: 9px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 0;
+    background: var(--white);
+  }
+
+  .profile-card {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    min-height: 390px;
+  }
+
+  .profile-photo {
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  .presentation {
+    padding: 48px 24px;
+  }
+
+  .presentation h1 {
+    font-size: 40px;
+  }
+
+  .links {
+    padding: 28px 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .procedures {
+    padding: 58px 20px;
+  }
+
+  .procedure-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .location-info {
+    padding: 58px 24px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .profile-photo {
+    min-height: 330px;
+  }
+
+  .profile-photo {
+    min-height: 390px;
+  }
+
+  .presentation {
+    padding: 40px 20px;
+  }
+
+  .link-card {
+    min-height: 82px;
+    padding: 10px 12px;
+    grid-template-columns: 50px 1fr 30px;
+  }
+
+  .link-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .procedure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procedure-card {
+    min-height: 210px;
+  }
+
+  .city-grid {
+    grid-template-columns: 1fr;
+  }
+}
