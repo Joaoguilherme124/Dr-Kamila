@@ -16,12 +16,16 @@ import moldeiraImage from './assets/clareamento-moldeira.png'
 import consultorioImage from './assets/clareamento-consultorio.png'
 import './App.css'
 
+const whatsappNumber = '5548998269160'
+const whatsappMessage = encodeURIComponent('Olá, gostaria de agendar uma avaliação.')
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+
 const links = [
   {
     title: 'AGENDAMENTO',
     description: 'Agende sua avaliação',
     icon: MessageCircle,
-    href: 'https://api.whatsapp.com/send',
+    href: whatsappLink,
     external: true,
   },
   {
